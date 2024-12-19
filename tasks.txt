@@ -1,1 +1,4 @@
-This is my project
+Custom URL Shortner
+1) POST/url: generates a new short url like example.com/some-id and redirects to orignal URL.
+2) GET/:id redirects to orignal URL
+3) GET/url/analytics/:id provides analytics for a url

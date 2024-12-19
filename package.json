@@ -6,12 +6,13 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon src/index.js"
+    "start": "nodemon src/index.js"
   },
   "author": "Nipun Kupatkar",
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.2",
-    "mongoose": "^8.9.1"
+    "mongoose": "^8.9.1",
+    "nanoid": "^5.0.9"
   }
 }
