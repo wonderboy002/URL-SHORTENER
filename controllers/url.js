@@ -44,6 +44,6 @@ async function getUrlAnalytics(req,res){
     if (!entry){
         return res.status(400).json({"msg":"Invalid URL!!!"});
     }
-    return res.json({"clicks":entry.visits.length})
+    return res.json({"clicks":entry.visits.length,"analytics":entry.visits})
 }
 export { createShortID, redirectOrignal, getUrlAnalytics};
