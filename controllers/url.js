@@ -46,4 +46,14 @@ async function getUrlAnalytics(req,res){
     }
     return res.json({"clicks":entry.visits.length,"analytics":entry.visits})
 }
-export { createShortID, redirectOrignal, getUrlAnalytics};
+
+async function getAllUrl(req,res){
+     const allUrls=await URL.find({});
+     const html=`<ol>${allUrls.map((url)=>{
+      return `<li>${url.short_id} - ${url.redirect_url} - ${url.visits.length}</li>`
+     }).join("")}</ol>`;
+     res.render("Home.ejs",{
+      urls: allUrls
+     });
+}
+export { createShortID, redirectOrignal, getUrlAnalytics,getAllUrl};
