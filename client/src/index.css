@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.App{
+    background-color: #dfe6e9;
+background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}

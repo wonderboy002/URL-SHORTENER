@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosArrowRoundBack } from "react-icons/io";
+import { Link } from 'react-router-dom';
 function Navbar() {
   const [flag,setFlag]=useState(false);
   return (
@@ -13,9 +14,9 @@ function Navbar() {
           </div>
           {/* Links goes here */}
           <div className="links hidden md:flex gap-8 ml-auto font-bold">
-            <span className='text-xl font'>Home</span>
-            <span className='text-xl font'>My Links</span>
-            <span className='text-xl font'>Sign In</span>
+            <Link to="/" className='text-xl font'>Home</Link>
+            <Link to="/MyLinks" className='text-xl font'>My Links</Link>
+            <Link to="/SignIn" className='text-xl font'>Sign In</Link>
           </div>
          {/* Hamburger menu for small Screens */}
           <div className="hamburger md:hidden ml-auto">
@@ -24,11 +25,11 @@ function Navbar() {
 
           {/* Responsive Menu */}
        </div>
-          {flag && (<div className='bg-white min-h-[100vh] w-[250px] p-8 flex flex-col gap-6  absolute right-0 z-10'>
+          {flag && (<div className='bg-white h-[100vh] w-[250px] p-8 flex flex-col gap-6 absolute top-0 right-0 z-10'>
             <button className="font-bold" onClick={()=>setFlag(!flag)}><IoIosArrowRoundBack/></button>
-            <span className='text-xl font'>Home</span>
-            <span className='text-xl font'>My Links</span>
-            <span className='text-xl font'>Sign In</span>
+            <Link className='text-xl font'>Home</Link>
+            <Link className='text-xl font'>My Links</Link>
+            <Link className='text-xl font'>Sign In</Link>
           </div>)}
           </>
   );
